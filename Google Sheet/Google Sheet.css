@@ -1,0 +1,687 @@
+
+body {
+	background-image: url(b2.png);
+	background-position: 0% 120%;
+	  transition: all 3s var(--cbz) 0s;
+  }
+  
+  body.dark-mode {
+	background-image: url(a35.png);
+	--cbz: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	  transition: all 3s var(--cbz) 0s;
+  }
+  
+  body {
+	  
+	  --cbz: cubic-bezier(0.68, -0.55, 0.27, 1.55)
+  }
+
+.pushvoucher{
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-image: url(a21.jpg);
+    box-sizing: border-box;
+    border-radius: 10px;
+  
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 4px;
+  
+
+  cursor: pointer;
+  border: 5px solid #ccc;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  margin-left: -12px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.pushvoucher  h2{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  font-family: Monoton;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+/* Set a style for all buttons */
+.signupbtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  
+}
+
+
+.checkbtn{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+    width: 100px;
+    height: 40px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0081;
+  margin-left: 220px;
+
+  color: #fff;
+  border-radius: 4px;
+  
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #ff0081 20%, transparent 30%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%), 
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, -#ff0081 15%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  
+  }
+  
+  &:after{
+    display: none;
+    bottom: -95%;
+    background-image:  
+    radial-gradient(circle, #ff0081 20%, transparent 20%), 
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #ff0081 15%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+ 
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#ff0081, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+@keyframes topBubbles {
+  0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+ 100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0%{
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+ 100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+.pushvoucher b{
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  font-family: Monoton;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+  
+}
+
+.signupbtn{
+ 
+  background-color: transparent;
+
+}
+
+@media screen and (max-width: 100px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+  
+.clearfix a{
+  position: relative;
+  display: inline-block;
+  background-color: #084b33;
+ color: #c71e1e;
+  height: 40px;
+  width: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px
+}
+
+.h11 .signupbtn{
+  margin-top: -2px;
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-left: -8px;
+  font-weight: bold;
+}
+.clearfix a:hover {
+  background: #084e52;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+.clearfix a span {
+  position: absolute;
+  display: block;
+}
+.clearfix a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.clearfix a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.clearfix a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.clearfix a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  }
+  
+}
+div.rounded-borderrr {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #104ae9, #e9104a, #e9e910);
+  border-image-slice: 1;
+
+  border-radius: 10px;
+ 
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+:root {
+  --slide-ease: cubic-bezier(.4,-0.3,.6,1.3);
+/*   --slide-ease: cubic-bezier(.8,-0.3,.2,1.3); */
+	--easing: var(--slide-ease);
+	--speed: 0.5s;
+	--width: clamp(50px, 45vmin, 125px);
+	--ar: 8 / 3;
+	--ray: hsl(0 0% 100% / 0.5);
+	--sun: hsl(47, 91%, 58%);
+	--moon: hsl(212, 13%, 82%);
+	--crater: hsl(221, 16%, 68%);
+	--bg: hsl(219, 30%, 88%);
+	--bear-speed: 10s;
+  --color: hsl(219 30% 20%);
+}
+
+[data-dark-mode=true] {
+  --bg: hsl(219, 30%, 12%);
+  --color: hsl(219 30% 98%);
+}
+
+
+
+.toggle__backdrop:first-of-type .clouds path:first-of-type {
+	fill: var(--ray);
+}
+
+.toggle {
+  -webkit-tap-highlight-color: transparent;
+	width: var(--width);
+  /* random attempts at tackling the overflow iOS issue */
+  z-index: 10;
+  will-change: transform;
+  isolation: isolate;
+  transform: translate3d(0, 0, 0);
+  /* End of workaround city   */
+	aspect-ratio: var(--ar);
+	border-radius: 100vh;
+	border: 0;
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	transition: background var(--speed) var(--easing);
+	--sky: hsl(204, 53%, 47%);
+	--night: hsl(229, 25%, 16%);
+	outline-color: transparent;
+	background: hsl(
+		calc(204 + (var(--dark, 0) * 25))
+		calc((53 - (var(--dark, 0) * 28)) * 1%)
+		calc((47 - (var(--dark, 0) * 31)) * 1%)
+	);
+	box-shadow:
+		calc(var(--width) * 0) calc(var(--width) * 0.02) calc(var(--width) * 0.01) calc(var(--width) * -0.0025) hsl(210 10% 100% / 0.95),
+		calc(var(--width) * 0) calc(var(--width) * -0.02) calc(var(--width) * 0.01) calc(var(--width) * -0.0025) hsl(210 10% 10% / 0.2),
+		calc(var(--width) * 0) calc(var(--width) * 0.02) calc(var(--width) * 0.5) 0 hsl(210 10% 100% / 0.15);
+}
+
+.toggle:after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	box-shadow:
+		calc(var(--width) * 0) calc(var(--width) * -0.025) calc(var(--width) * 0.025) 0 hsl(210 10% 10% / 0.15) inset,
+		calc(var(--width) * 0) calc(var(--width) * 0.025) calc(var(--width) * 0.025) 0 hsl(210 10% 10% / 0.65) inset;
+	border-radius: 100vh;
+}
+
+.toggle__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 100vh;
+  display: block;
+  clip-path: inset( 0 0 0 0 round 100vh);
+}
+
+.toggle__backdrop {
+  overflow: visible !important;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	transition: translate var(--speed) var(--easing);
+	translate: 0 calc(
+		var(--dark, 0) * (100% - (3 / 8 * var(--width)))
+	);
+}
+
+[aria-pressed=false] .toggle__backdrop:last-of-type {
+	transition-timing-function: cubic-bezier(.2,-0.6,.7,1.6);
+}
+[aria-pressed=false] .stars path {
+	transition-delay: 0s;
+}
+
+.stars path {
+	transform-box: fill-box;
+	transform-origin: 25% 50%;
+	scale: calc(0.25 + (var(--dark, 0) * 0.75));
+	transition: scale var(--speed) calc(var(--speed) * 0.5) var(--easing);
+}
+
+.toggle__indicator {
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: 0%;
+	display: grid;
+	place-items: center;
+	padding: 3%;
+}
+
+.pilot-bear {
+	position: absolute;
+	width: 25%;
+}
+
+.toggle__star {
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	position: relative;
+	transition: translate var(--speed) var(--easing);
+	translate: calc((var(--dark, 0) * -10%) + 5%) 0;
+/* 	translate: calc((var(--dark, 0) * -18%) + 5%) 0; */
+}
+
+.sun {
+	background: var(--sun);
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow:
+		calc(var(--width) * 0.01) calc(var(--width) * 0.01) calc(var(--width) * 0.02) 0 hsl(210 10% 100% / 0.95) inset,
+		calc(var(--width) * -0.01) calc(var(--width) * -0.01) calc(var(--width) * 0.02) 0 hsl(210 10% 20% / 0.5) inset;
+}
+.moon {
+	position: absolute;
+	inset: -1%;
+	border-radius: 50%;
+	background: var(--moon);
+  transition: translate var(--speed) ease-in-out;
+	translate: calc((100 - (var(--dark, 0) * 100)) * 1%) 0%;
+	box-shadow:
+		calc(var(--width) * 0.01) calc(var(--width) * 0.01) calc(var(--width) * 0.02) 0 hsl(210 10% 100% / 0.95) inset,
+		calc(var(--width) * -0.01) calc(var(--width) * -0.01) calc(var(--width) * 0.02) 0 hsl(210 10% 10% / 0.95) inset;
+}
+
+.moon__crater {
+	position: absolute;
+	background: var(--crater);
+	border-radius: 50%;
+	width: calc(var(--size, 10) * 1%);
+	aspect-ratio: 1;
+	left: calc(var(--x) * 1%);
+	top: calc(var(--y) * 1%);
+	box-shadow:
+		calc(var(--width) * 0.01) calc(var(--width) * 0.01) calc(var(--width) * 0.01) 0 hsl(210 10% 6% / 0.25) inset,
+		0 calc(var(--width) * 0.005) calc(var(--width) * 0.01) 0 hsl(210 10% 100% / 0.25);
+}
+
+.moon__crater:nth-of-type(1) {
+	--size: 18;
+	--x: 40;
+	--y: 15;
+}
+.moon__crater:nth-of-type(2) {
+	--size: 20;
+	--x: 65;
+	--y: 58;
+}
+.moon__crater:nth-of-type(3) {
+	--size: 34;
+	--x: 18;
+	--y: 40;
+}
+
+.toggle__star:before {
+	content: "";
+	z-index: -1;
+	width: 356%;
+	background:
+		radial-gradient(hsl(0 0% 100% / 0.25) 40%, transparent 40.5%),
+		radial-gradient(hsl(0 0% 100% / 0.25) 56%, transparent 56.5%)
+	  hsl(0 0% 100% / 0.25);
+	border-radius: 50%;
+	aspect-ratio: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: translate var(--speed) var(--easing);
+	translate: calc(
+		(50 - (var(--dark, 0) * 4)) *
+		-1%
+	)
+	-50%;
+}
+
+.toggle__star:after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	display: block;
+	background: hsl(0 0% 0% / 0.5);
+	filter: blur(4px);
+	translate: 2% 4%;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.toggle__indicator-wrapper {
+	position: absolute;
+	inset: 0;
+	transition: translate var(--speed) var(--slide-ease);
+	translate: calc(
+		var(--dark, 0) * (var(--width) - (3 / 8 * var(--width)))
+	) 0;
+}
+
+[aria-pressed=true] {
+	--dark: 1;
+}
+
+/* Fun stuff! */
+
+/* We have 11 stars */
+
+.stars g {
+	transform-box: fill-box;
+	transform-origin: 50% 50%;
+}
+.stars g:nth-of-type(3) {
+	animation: twinkle 4s -2s infinite;
+}
+
+.stars g:nth-of-type(11) {
+	animation: twinkle 6s -2s infinite;
+}
+
+.stars g:nth-of-type(9) {
+	animation: twinkle 4s -1s infinite;
+}
+
+@keyframes twinkle {
+	0%, 40%, 60%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0);
+	}
+}
+
+.astrobear {
+	width: 12%;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	transition: translate calc(var(--speed) + (var(--dark, 0) * (var(--bear-speed) - var(--speed))))
+		calc(var(--bear-speed) * (0.4 * var(--dark, 0))) linear;
+	translate: calc(var(--dark, 0) * 400%) calc(var(--dark, 0) * -350%);
+}
+
+.astrobear svg {
+	transform-origin: 50% 75%;
+	scale: var(--dark, 0);
+	rotate: calc(var(--dark, 0) * 360deg);
+	transition: rotate calc(var(--speed) + (var(--dark, 0) * (var(--bear-speed) - var(--speed)))) calc(var(--bear-speed) * 0.4) linear, scale var(--speed) ease-in-out;
+}
+
+
+.astrobear__container {
+	position: absolute;
+	overflow: hidden;
+	inset: 0;
+	clip-path: inset(0 0 0 0);
+	opacity: var(--dark, 0);
+	translate: 0 calc(-200% + (var(--dark, 0) * 200%));
+	transition: opacity var(--speed) var(--easing), translate var(--speed) var(--easing);
+}
+
+.pilot__container {
+	position: absolute;
+	overflow: hidden;
+	inset: 0;
+	clip-path: inset(0 0 0 0);
+	opacity: calc(1 - var(--dark, 0));
+	translate: 0 calc(var(--dark, 0) * 200%);
+	transition: opacity var(--speed) var(--easing), translate var(--speed) var(--easing);
+}
+
+.pilot-bear {
+	width: 18%;
+	position: absolute;
+	top: 70%;
+	left: 100%;
+	transition:
+		translate
+			calc(
+				var(--speed) + ((1 - var(--dark, 0)) *
+					((var(--bear-speed) * 0.5) - var(--speed))))
+			calc((var(--bear-speed) * 0.5) * ((1 - var(--dark, 0)) * 0.4)) linear;
+	translate:
+		calc(
+			(0 - (1 - var(--dark, 0))) * (var(--width) + 100%)
+		) calc(
+		(0 - (1 - var(--dark, 0))) * (200%)
+	);
+}
+
+.pilot {
+	rotate: 12deg;
+	animation: fly 4s infinite ease-in-out;
+}
+
+@keyframes fly {
+	50% { translate: 0 -25%; }
+}
+
+.controls {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: sans-serif;
+  color: var(--color);
+  transition: color var(--speed) var(--easing);
+}
+
+[type=checkbox] {
+  accent-color: var(--color);
+  transition: accent-color var(--speed) var(--easing);
+}
+
